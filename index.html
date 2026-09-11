@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stay Awake or Scream</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <div id="flash"></div>
+
+  <header>
+    <h1>STAY AWAKE <span>or it screams</span></h1>
+    <p class="subtitle">Close your eyes for 2 seconds. See what happens.</p>
+  </header>
+
+  <main>
+    <div class="stage">
+      <video id="video" autoplay muted playsinline></video>
+      <canvas id="overlay"></canvas>
+      <div id="watchIcon">👁</div>
+    </div>
+
+    <div class="panel">
+      <div class="row">
+        <span class="label">Camera</span>
+        <span id="camState" class="value pending">starting…</span>
+      </div>
+      <div class="row">
+        <span class="label">Eyes</span>
+        <span id="eyeState" class="value pending">—</span>
+      </div>
+      <div class="row">
+        <span class="label">Blinks</span>
+        <span id="blinkCount" class="value">0</span>
+      </div>
+      <div class="row">
+        <span class="label">Closed for</span>
+        <span id="timerVal" class="value">0.0s</span>
+      </div>
+      <div class="row">
+        <span class="label">EAR</span>
+        <span id="earVal" class="value">—</span>
+      </div>
+
+      <div class="bar-track">
+        <div id="bar" class="bar-fill"></div>
+      </div>
+      <p class="hint">Bar fills red as your eyes stay shut. Full bar = scream.</p>
+
+      <button id="startBtn">Enable Camera</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>Tip: needs decent lighting on your face. Runs fully in your browser, nothing is uploaded.</p>
+  </footer>
+
+  <!-- MediaPipe Face Mesh (loaded from CDN, runs entirely in-browser) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh@0.4.1633559619/face_mesh.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1675466862/camera_utils.js" crossorigin="anonymous"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
