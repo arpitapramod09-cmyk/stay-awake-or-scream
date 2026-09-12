@@ -1,61 +1,77 @@
-# Stay Awake or Beep 👁️🔔
+<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
-A "useless project": your webcam watches your eyes. Close them for **2 seconds**
-and the app sounds a long alarm beep and flashes the screen red.
 
-Everything runs **locally in the browser**. No server code, no API keys,
-no audio files, nothing gets uploaded anywhere. The beep is generated live
-by the Web Audio API — there's nothing extra to add or configure.
 
-## Files
-- `index.html` — page layout
-- `style.css` — styling
-- `app.js` — camera + eye-tracking + scream logic
+# STAY AWAKE OR SCREAM 🎯
 
-## How to run it in VS Code (important — read this)
 
-Browsers block camera access on plain `file://` pages in many setups, so you
-need to open this through a local server. The easiest way:
+## Basic Details
+##Team Name: Nova Co
 
-1. Open the `eye-scream-app` folder in VS Code (`File > Open Folder`).
-2. Install the **Live Server** extension (by Ritwick Dey) from the
-   Extensions tab (`Ctrl+Shift+X`, search "Live Server").
-3. Right-click `index.html` in the file explorer →
-   **"Open with Live Server"**.
-4. Your browser opens something like `http://127.0.0.1:5500/index.html`.
-5. Click the **"Enable Camera"** button on the page.
-6. Allow camera access when the browser asks.
-7. Sit normally facing the camera in decent lighting, then close your eyes
-   for 2 seconds and wait for it to scream.
 
-If you don't want to install an extension, you can instead run this in a
-terminal from inside the folder (Python is usually already installed):
+### Team Members
+- Team Lead: Arpita Pramod - College of engineering trikaripur
+- Member 2: Devanandha.M - College of engineering tikaripur
+  
 
-```bash
-python -m http.server 5500
-```
+### Project Description
+Our project works on computer vision model. Whenever the user blinks eye the system displays a warning system and beeps.
 
-Then open `http://localhost:5500` in your browser.
+### The Problem (that doesn't exist)
+Blinking eyes 
 
-## Troubleshooting
+### The Solution (that nobody asked for)
+people will get irritated and will try not to blink, which will help them to win staring competitions.
 
-- **"Could not access camera"** → make sure you opened the page via
-  `http://localhost...` (Live Server), not by double-clicking the HTML file.
-- **It never detects "closed"** → lighting matters. Face a window or lamp,
-  and open `app.js`, then raise `EAR_THRESHOLD` slightly (e.g. from `0.21`
-  to `0.24`) if it's too strict, or lower it if it triggers too easily even
-  with eyes open. Watch the live "EAR" number on the page while blinking to
-  find a good cutoff for your face/lighting.
-- **No sound** → check your system volume; some browsers need one click
-  on the page before audio is allowed to play (the "Enable Camera" click
-  satisfies this since it's a user gesture).
+## Technical Details
+### Technologies/Components Used
+For Software:
+- Html,JavaScript,Css
+- Computer viion
+-  Google MediaPipe Face Landmarker
+- Claude AI, VS code, VS code extension, Microsoft edge
 
-## How it works (quick version)
+### Implementation
+For Software:index.html
+# Installation
+[commands]
 
-1. `@mediapipe/face_mesh` (loaded from a CDN) finds 468 points on your face
-   every frame.
-2. Six points around each eye are used to compute the **Eye Aspect Ratio
-   (EAR)** — a number that drops sharply when your eyelid closes.
-3. If EAR stays below the threshold for 2 continuous seconds, the app
-   triggers a screen flash and a long synthesized beep (Web Audio API),
-   repeating the beep for as long as your eyes stay closed.
+# Run
+[commands]
+
+### Project Documentation
+For Software:
+
+# Screenshots (Add at least 3)
+![
+
+
+![Screenshot2](Add screenshot 2 here with proper name)
+*Add caption explaining what this shows*
+
+![Screenshot3](Add screenshot 3 here with proper name)
+*Add caption explaining what this shows*
+
+# Diagrams
+![Workflow](Add your workflow/architecture diagram here)
+*Add caption explaining your workfl
+
+
+### Project Demo
+# Video
+[Add your demo video link here]
+*Explain what the video demonstrates*
+
+# Additional Demos
+[Add any extra demo materials/links]
+
+## Team Contributions
+- [Name 1]: [Specific contributions]
+- [Name 2]: [Specific contributions]
+- [Name 3]: [Specific contributions]
+
+---
+Made with ❤️ at TinkerHub Useless Projects 
+
+![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
+![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
