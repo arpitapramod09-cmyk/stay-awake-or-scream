@@ -51,12 +51,9 @@ For Software:
 
 
 ### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
 
 # Additional Demos
-[Add any extra demo materials/links]
+https://arpitapramod09-cmyk.github.io/stay-awake-or-scream/
 
 ## Team Contributions
 - [Name 1]: [Specific contributions]
